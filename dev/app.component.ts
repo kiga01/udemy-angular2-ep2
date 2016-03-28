@@ -5,7 +5,8 @@ import {Component} from 'angular2/core';
     template: `
         <div class="container-fluid">
             {{onTest()}}
-            <input type="text" class="form-control" value="{{name}}" class="{{'red'}}">
+            <input type="text" class="form-control" [value]="name" [ngClass]="{red: true}" [disabled]="1 === 1">
+            
         </div>
     `,
     directives: [],
