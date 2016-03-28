@@ -1,0 +1,45 @@
+@import '../../node_modules/font-awesome/scss/font-awesome.scss';
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss';
+
+
+body {
+  padding: 32px;
+  margin: 32px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+}
+
+.setup,
+.puzzle {
+  padding: 16px;
+  margin-bottom: 32px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.setup {
+  border: 1px solid #cccccc;
+  background-color: #eeeeee;
+}
+
+.puzzle {
+  border: 1px solid red;
+  background-color: #ffdbd6;
+}
+
+.puzzle.solved {
+  border: 1px solid green;
+  background-color: #ccffda;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.form-group,
+.label-form,
+.form-control {
+  margin: 0;
+}
