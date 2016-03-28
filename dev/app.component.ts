@@ -5,8 +5,8 @@ import {Component} from 'angular2/core';
     template: `
         <div class="container-fluid">
             {{onTest()}}
-            <input type="text" class="form-control" [value]="name" [ngClass]="{red: true}" [disabled]="1 === 1">
-            
+            <input type="text" class="form-control" [value]="name" [ngClass]="{red: true}" (keyup)="onKeyUp(inpuElement.value)" #inpuElement>
+            <p>{{values}}</p>
         </div>
     `,
     directives: [],
@@ -14,8 +14,13 @@ import {Component} from 'angular2/core';
 
 export class AppComponent {
     name = 'kiga';
+    values = '';
 
     onTest() {
         return 1 === 1;
+    }
+
+    onKeyUp(value: string) {
+        this.values += value + ' | ';
     }
 }
